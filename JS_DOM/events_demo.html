@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Demo</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <main>
+            <h1>Welcome to the DOM Demo</h1>
+            <!-- <p id="first-paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius magni est dicta molestiae consequatur commodi delectus rerum officiis sapiente, dolore tempore in repudiandae, doloremque hic molestias ex veniam magnam?
+            </p>
+            <div>
+                <p id="bad-word">hey fuck you</p>
+            </div>
+            <p id="second-paragraph" class="support-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, saepe. Dolore aspernatur alias enim excepturi!
+            </p>
+            <p id="third-paragraph" class="support-paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iste possimus fugiat?
+            </p> -->
+            <div id="list-section">
+                <a id="add-to-list" href="#">Add new element to list</a>
+                <ul id="key-items">
+                    <li>Our First LI</li>
+                    <li>Our Second LI</LI>
+                    <li>Our Third LI</li>
+                </ul>
+            </div>
+        </main>
+        <script>
+            'use strict';
+            let i = 4;
+            const list = document.getElementById('key-items');            
+            const addAction = document.getElementById('add-to-list');
+
+            // addAction.addEventListener('click', (e) =>{
+            //     // prevents our anchor tag from following href link (in this case #, but could be any address)
+            //     e.preventDefault();
+            //     const li = document.createElement('li');
+            //     li.innerText = `LI from anchor tag #${i}`;
+            //     i++;
+            //     list.appendChild(li);
+
+            // });
+            
+            addAction.addEventListener('click', addFromLink);
+
+            function addFromLink (e) {
+                e.preventDefault();
+                const li = document.createElement('li');
+                li.innerText = `LI from anchor tag #${i}`;
+                i++;
+                list.appendChild(li);
+                addAction.removeEventListener('click', addFromLink);
+            };
+
+            // const mainEl = document.querySelector('main');
+            // const h1El = document.querySelector('H1');
+            // const list = document.getElementById('key-items');
+            // let i = 4;
+
+            // mainEl.addEventListener('click', addLi);
+            // h1El.addEventListener('click', addLiFromH1);
+
+            // function addLi (e) {
+            //     // const fragment = document.createDocumentFragment();
+            //     const li = document.createElement('li');
+            //     li.innerText = `LI #${i}`;
+            //     i++;
+            //     // fragment.appendChild(li);
+            //     // list.appendChild(fragment);
+            //     list.appendChild(li);
+            // }
+
+            // function addLiFromH1 (e) {
+            //     // stopProp() stops event from 'bubbling up' to next level in hierarchy
+            //     // prevents H1 click event from also triggering event in the parent element
+            //     // (so H1 click doesn't trigger Main element event)
+            //     e.stopPropagation();
+            //     const li = document.createElement('li');
+            //     li.innerText = `LI from H1 #${i}`;
+            //     i++;
+            //     list.appendChild(li);
+            // }
+
+        </script> 
+    </body>
+</html>

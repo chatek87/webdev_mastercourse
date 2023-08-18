@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Demo</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <main>
+            <h1>DOM Demo</h1>
+            <form action="" method="post">
+                <div>
+                    <label for="fullName">Full Name: </label>
+                    <input id="fullName" type="text" name="fullName" required>
+                </div>
+                <div>
+                    <label for="guests">Number of Guests: </label>
+                    <input id="guests" type="number" name="guests" required>
+                </div>
+                <div>
+                    <button id="submit" type="submit">Submit</button>
+                    <button id="reset" type="reset">Reset</button>
+                </div>
+            </form>
+            <div id="list-section">
+                <h2>Guestbook Entries</h2>
+                <small>Total Guests: <span id="totalGuests">0</span></small>
+                <ul id="items">
+                </ul>
+            </div>
+        </main>
+        <script>
+            'use strict';
+            const submitButton = document.getElementById('submit');
+            const fullName = document.getElementById('fullName');
+            const list = document.getElementById('items');
+            const guestsValue = document.getElementById('guests');
+            const totalGuestsSection = document.getElementById('totalGuests');
+            let totalGuestsCount = 0;
+
+            submitButton.addEventListener('click', submitAction);
+
+            function submitAction(e) {
+                e.preventDefault();
+
+                const li = document.createElement('li');
+                li.innerText = fullName.value;
+                list.appendChild(li);
+                fullName.value = '';
+
+                // totalGuestsCount += Number(guestsValue.value);   // this is one way
+                totalGuestsCount += guestsValue.valueAsNumber;      // this is another
+                totalGuestsSection.innerText = totalGuestsCount;
+                guestsValue.value = 0;
+            }
+        </script> 
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Demo</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <main>
+            <h1>Welcome to the DOM Demo</h1>
+            <!-- <p id="first-paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius magni est dicta molestiae consequatur commodi delectus rerum officiis sapiente, dolore tempore in repudiandae, doloremque hic molestias ex veniam magnam?
+            </p>
+            <div>
+                <p id="bad-word">hey fuck you</p>
+            </div>
+            <p id="second-paragraph" class="support-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, saepe. Dolore aspernatur alias enim excepturi!
+            </p>
+            <p id="third-paragraph" class="support-paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iste possimus fugiat?
+            </p> -->
+            <div id="list-section">
+                <a id="add-to-list" href="#">Add new element to list</a>
+                <ul id="key-items">
+                    <li>Our First LI</li>
+                    <li>Our Second LI</LI>
+                    <li>Our Third LI</li>
+                </ul>
+            </div>
+            <div>
+                <h2 id="display-message">Send Email Demo</h2>
+                <p id="status-message"></p>
+                <a id="send-email" href="#">Send Email with Mistake</a> <br />
+                <a id="recall-email" href="#">Recall Email</a>
+            </div>
+        </main>
+        <script>
+            'use strict';
+            let i = 4;
+            const list = document.getElementById('key-items');            
+            const addAction = document.getElementById('add-to-list');
+            const displayMessage = document.getElementById('display-message');
+            let timeoutId = 0;
+            const sendEmailAnchor = document.getElementById('send-email');
+            const cancelEmailAnchor = document.getElementById('recall-email');
+            let countdown = 10;
+            const statusMessage = document.getElementById('status-message');
+            sendEmailAnchor.addEventListener('click', sendEmail);
+            cancelEmailAnchor.addEventListener('click', cancelEmail);
+
+            function sendEmail(e) {
+                e.preventDefault();
+                timeoutId = setTimeout(countDownToSend);
+            }
+
+            function countDownToSend() {
+                if (countdown > 0) {
+                    statusMessage.innerText = `Email will send in ${countdown} seconds...`;
+                    countdown--;
+                    timeoutId = setTimeout(countDownToSend, 1000);
+                } else {
+                    actuallySendEmail();
+                    countdown = 10;
+                }
+            }
+
+            function cancelEmail(e) {
+                e.preventDefault();
+                clearTimeout(timeoutId);
+                cancelSendEmail();
+                countdown = 10;
+            }
+
+            function actuallySendEmail() {
+                displayMessage.innerText = 'The email has been sent.';
+            }
+
+            function cancelSendEmail() {
+                displayMessage.innerText = 'The email has been recalled';
+                statusMessage.innerText = '';
+            }
+
+            // addAction.addEventListener('click', addFromLink);
+
+            // function addFromLink (e) {
+            //     e.preventDefault();
+            //     const li = document.createElement('li');
+            //     li.innerText = `LI from anchor tag #${i}`;
+            //     li.classList.add('new-item');
+            //     i++;
+            //     list.appendChild(li);
+            //     setTimeout(removeNewItemClass, 2000, li);
+            // };
+
+            // function removeNewItemClass(item) {
+            //     // const items = list.querySelectorAll('.new-item');
+            //     // const itemsArray = Array.from(items);
+            //     // itemsArray.forEach(el => el.classList.remove('new-item'));
+            //     item.classList.remove('new-item');
+            // }
+        </script> 
+    </body>
+</html>

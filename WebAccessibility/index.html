@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web Accessibility Demo</title>
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul role="menubar">
+                    <li role="menuitem"><a href="index.html">Home</a></li>
+                    <li role="menuitem"><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+            <form>
+                <label for="RememberMe">Remember Me: </label>
+                <input id="RememberMe" name="RememberMe" type="checkbox" checked >
+                <!-- <span role="checkbox" aria-checked="true" id="RememberMe">X</span> -->
+            </form>
+        </header>
+        <main>
+            <article>
+                <h1>The Benefits and Drawbacks of HTML</h1>
+                <section>
+                    <h2>The Benefits</h2>
+                    <figure>
+                        <img src="images/favicon.ico" alt="">
+                        <figcaption>Figure 1 - This is our site icon</figcaption>
+                    </figure>
+                    <p lang="fr">
+                        Voici notre superbe millésime ruh khus de 2001, un petit trésor parmi les trésors ! le vétiver 
+                        est bien connu pour son effet apaisant, contre l'anxiété et le stress. Parfois surnommée l'huile de 
+                        la tranquillité, elle est très utile en aromathérapie mais aussi incontournable en parfumerie naturelle.
+                        Ruh khus est largement utilisé en parfumerie comme fixateur, mais il aide également dans les bases 
+                        de <span lang="en">chypre</span> et de <span lang="en">fougère</span>. En bois et résines.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus incidunt voluptatum vitae.
+                    </p>
+                    <table>
+                        <caption>Users From The Database</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">FirstName</th>
+                                <th scope="col">LastName</th>
+                            </tr>
+                        </thead>
+                        <tbody>                            
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Tim</td>
+                                <td>Corey</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Sue</td>
+                                <td>Storm</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </section>
+                <section>
+                    <h2>The Drawbacks</h2>
+                        <img src="images/kidpix-sample-1.jpg" alt="colorful abstract digital art made with kidpix" width="300" height="200"> 
+                    <p style="background-color: black;color: cornflowerblue;">
+                        Lorem ipsum dolor sit.
+                    </p>
+                </section>
+                <section>
+                    <h2>Final Thoughts</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing.
+                    </p>
+                </section>
+                <aside>
+                    <p>
+                        ""You miss 100% of the shots you don't take." 
+                            -Wayne Gretsky"
+                            -Michael Scott
+                    </p>
+                    <button>Click Me, Bitch!</button>
+                </aside>
+            </article>
+        </main>
+        <footer>
+            <small>&copy;Silver Shamrock Industries, 2003. All Rights Reserved. 
+                (the fine print stuff goes in the 'small' tag. 'Small' tag
+                has noting to do with size of the text.)</small>
+        </footer>
+    </body>
+</html>

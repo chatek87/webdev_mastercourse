@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM Demo</title>
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <main>
+            <h1>Welcome to the DOM Demo</h1>
+            <p id="first-paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eius magni est dicta molestiae consequatur commodi delectus rerum officiis sapiente, dolore tempore in repudiandae, doloremque hic molestias ex veniam magnam?
+            </p>
+            <div>
+                <p id="badword">hey fuck you</p>
+            </div>
+            <p id="second-paragraph" class="support-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, saepe. Dolore aspernatur alias enim excepturi!
+            </p>
+            <p id="third-paragraph" class="support-paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iste possimus fugiat?
+            </p>
+            <div id="list-section">
+                <ul id="key-items">
+                    <li>Our First LI</li>
+                    <li>Our Second LI</LI>
+                    <li>Our Third LI</li>
+                </ul>
+            </div>
+        </main>
+        <script>
+            // SELECTING CHILDREN OF AN ELEMENT:
+            // const section = document.getElementById('list-section');
+            // const list =  section.querySelector('ul');            
+            // const items = list.children;
+            // for(let i = 0; i < items.length; i++){
+                // console.log(items[i]);
+            // }
+            // can't use foreach on an htmlcollection, so must cast to array:
+            // const itemsArray = Array.from(items);
+            // now, we can foreach it!
+            // itemsArray.forEach(el => console.log(el));
+
+            // SELECTING PARENTS OF AN ELEMENT:
+            // const section = document.getElementById('key-items');
+            // const parent = section.parentElement;
+            // const mainElement = section.closest('main');
+
+            // console.log(mainElement);
+
+            // SELECTING SIBLINGS OF AN ELEMENT
+            // this automatically selects the first element which fits the query:
+            // const listItem = document.querySelector('li');
+
+            // select next sibling element
+            // const nextItem = listItem.nextElementSibling;
+            //
+            // const finalItem = nextItem.nextElementSibling;
+            // 
+            // const previousItem = listItem.previousElementSibling;
+
+            // console.log(listItem);
+            // console.log(nextItem);
+            // console.log(finalItem);
+            // console.log(previousItem);
+            
+            // this will iterate thru every sib element until there aren't any more 
+            let listItem = document.querySelector('li');
+
+            while(listItem !== null) {
+                console.log(listItem);
+                listItem = listItem.nextElementSibling;
+            }
+
+
+        </script>
+    </body>
+</html>

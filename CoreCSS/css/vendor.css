@@ -1,0 +1,20 @@
+#Lovely-Victorian-House-In-Autumn-img {
+    width: 60%;
+}
+
+span {
+    font-size: 8px;
+}
+
+.text .test-span {
+    font-size: larger;
+}
+
+.test-span {
+    font-size: 20px;
+}
+
+#special-id {
+    font-size: 60px;
+    /* color: rgb(44, 230, 60); */
+}
