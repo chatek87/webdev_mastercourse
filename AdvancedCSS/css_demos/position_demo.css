@@ -1,0 +1,55 @@
+/* other css */
+#blorb {
+    color: rgb(57, 170, 173);
+}
+
+h1 {
+    background-color: aquamarine;
+}
+
+/* setup css */
+#first-div {
+    color: aliceblue;
+    background-color: aqua;
+    height: 100px;
+    width: auto;
+    z-index: 2;
+}
+
+#second-div {
+    color: antiquewhite;
+    background-color: coral;
+    height: 100px;
+    width: auto;
+    z-index: 50;
+}
+
+#inner-div {
+    background-color: beige;
+    height: 25px;
+    width: 25px;
+}
+
+/* positioning css */
+.relative {
+    position: relative;
+    left: 10rem;
+    /* top: 10rem; */
+}
+
+.absolute {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}

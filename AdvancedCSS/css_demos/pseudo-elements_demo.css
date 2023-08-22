@@ -1,0 +1,49 @@
+/* #item-list {
+    list-style: none;
+} */
+
+/* 
+pseudo-elements - :: - describe part of an element
+pseudo-classes - : - define the state of an element
+*/
+
+/* this applies to the first child of any li */
+li:first-child {
+    background-color: bisque;
+}
+
+#first-list li:first-child {
+    font-size: 1.5rem;
+}
+
+li:nth-child(2) {
+    font-style: italic;
+}
+
+li:last-child {
+    color: red;
+}
+
+h2:nth-of-type(2) {
+    color: greenyellow;
+}
+
+#button1:hover {
+    background-color: blueviolet;
+    color: antiquewhite;
+    border: 2px solid salmon;
+    /* padding: 5px; */
+}
+
+#section1 p:first-of-type::first-line {
+    color: blue;
+}
+
+p::first-line {
+    color:saddlebrown;
+    font-weight: bolder;
+}
+
+p::first-letter {
+    color: aqua;
+}

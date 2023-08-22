@@ -1,0 +1,18 @@
+html {
+    background-color: gainsboro;
+}
+
+#section1 {
+    background-color: salmon;
+}
+
+header, footer {
+    background-color: darkblue;
+    color: wheat;
+    font-size: 3rem;
+    text-align: center;
+}
+
+@media print {
+    
+}

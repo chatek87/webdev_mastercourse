@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+@mixin standard-grid() {
+    display: grid;
+    grid-gap: 10px;
+}
+
+p {
+    color: $brand-color;
+}
+
+.container {
+    @include standard-grid();
+    grid-template-columns: repeat(3, 1fr);
+
+    &-item {
+        background-color: $brand-color;
+        height: 100px;
+    }
+
+    &-item p {
+        color: chartreuse;
+    }
+}

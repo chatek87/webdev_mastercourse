@@ -1,3 +1,16 @@
-.h1 {
-    background-color: aquamarine;
+p {
+  color: #43a577;
+}
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.container-item {
+  background-color: #43a577;
+  height: 100px;
+}
+.container-item p {
+  color: chartreuse;
 }

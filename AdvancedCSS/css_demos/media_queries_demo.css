@@ -1,0 +1,52 @@
+html {
+    color: black;
+    background-color: white;
+    font-size: 18px;
+
+}
+
+.size-heading {
+    font-size: 3rem;
+    display: none;
+}
+
+/* this sets the site to the browser's color scheme */
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        color: white;
+        background-color: black;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 24px;
+    }
+    #size1 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    #size2 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    #size3 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    #size4 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #size5 {
+        display: block;
+    }
+}

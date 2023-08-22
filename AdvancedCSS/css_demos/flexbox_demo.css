@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item {
+    border: 1px black solid;
+    background-color: cornflowerblue;
+    color: wheat;
+    font-size: 2rem;
+    width: 100px;
+    min-height: 100px;
+    /* this is the recommended way: */
+    /* flex: 0 1 auto;  */
+    /* this is the equivalent non-one-liner */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    /* also, these flex settings are the default and we will rarely change these:display: display: display: display: 
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+        
+    */
+}
+
+#item1 {
+    /* order: 1; */
+}
+
+#item2 {
+    /* order: 2; */
+}
+
+#item3 {
+    /* order: 0; */
+    /* flex-grow: 15; */
+    /* flex-shrink: 0; */
+}
