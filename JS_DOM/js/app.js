@@ -23,7 +23,6 @@
                 pageItems.taskList.removeChild(el);
             }
         });
-
     }
 
     function completeTask(e) {
